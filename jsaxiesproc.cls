@@ -1,3 +1,7 @@
+% AXIES 年次大会予稿集用クラスファイル.
+% jsarticle, ひいては platex2e が必要です.
+% また geometry パッケージを使用します.
+%
 \ProvidesClass{axiesproc}[2016/08/01]
 \LoadClass[a4paper,twocolumn,10pt]{jsarticle}
 
@@ -50,6 +54,7 @@
     \par\vskip 1.5em
     \ifvoid\@abstractbox\else\centerline{\box\@abstractbox}\vskip1.5em\fi
     }
+  % \title \author は既存のマクロを利用 \@title \author に値がセットされる.
   \newcommand{\etitle@affiliation}{}
   \newcommand{\etitle@contactemail}{}
   \newcommand{\etitle@etitle}{}
@@ -63,3 +68,6 @@
 \makeatother
 
 \pagestyle{empty}
+
+% for vim cofiguration
+% vim: set fileformat=unix fileencoding=utf8 filetype=tex
