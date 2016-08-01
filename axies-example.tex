@@ -1,85 +1,37 @@
-\documentclass[a4paper,twocolumn,10pt]{jsarticle}
-\usepackage{geometry}
+% axiesproc クラスを利用します.
+% このクラスは jsarticle に依存し, ひいては pLaTeX2e を要求します
+\documentclass{axiesproc}
 
-% configuration for geometry
-\geometry{top=20mm, bottom=24mm, left=23mm, right=23mm}
+% 必要に応じ, 適宜パッケージを追加してください.
+% usepackage{amsmath}
 
-% jsarticle 定義部分の上書き
-\makeatletter
-  % maketitle
-  \def\@maketitle{%
-    \newpage
-    \begin{center}%
-       %日本語タイトル
-	    {\Large \textbf{\@title} \par}%
-       \vskip 9pt
-       %日本語著者
-       {\large \lineskip .0em
-        \begin{tabular}[t]{c}%
-          \@author
-        \end{tabular} \par}%
-       \vskip 9pt
-       %日本語所属
-       {\normalsize \lineskip .0em
-        \begin{tabular}[t]{c}%
-          \etitle@affiliation
-        \end{tabular} \par}%
-      % e-mail address
-       \vskip 0.3em
-       {\normalsize \lineskip .0em
-        \begin{tabular}[t]{c}%
-		{\tt \etitle@contactemail}
-        \end{tabular} \par}%
-      % english title
-      \vskip 1.5em
-       {\Large \textbf{\etitle@etitle} \par}%
-       \vskip 0.5em
-       {\large \lineskip .0em
-        \begin{tabular}[t]{c}%
-          \etitle@eauthor
-        \end{tabular} \par}%
-       \vskip 0.5em
-       {\normalsize\selectfont \lineskip .0em
-        \begin{tabular}[t]{c}%
-          \etitle@eaffiliation
-        \end{tabular} \par}%
-      \vskip 0.5em
-    \end{center}%
-    \par\vskip 1.5em
-    \ifvoid\@abstractbox\else\centerline{\box\@abstractbox}\vskip1.5em\fi
-    }
-  \newcommand{\etitle@affiliation}{}
-  \newcommand{\etitle@contactemail}{}
-  \newcommand{\etitle@etitle}{}
-  \newcommand{\etitle@eauthor}{}
-  \newcommand{\etitle@eaffiliation}{}
-  \newcommand{\affiliation}[1]{\renewcommand{\etitle@affiliation}{#1}}
-  \newcommand{\contactemail}[1]{\renewcommand{\etitle@contactemail}{#1}}
-  \newcommand{\etitle}[1]{\renewcommand{\etitle@etitle}{#1}}
-  \newcommand{\eauthor}[1]{\renewcommand{\etitle@eauthor}{#1}}
-  \newcommand{\eaffiliation}[1]{\renewcommand{\etitle@eaffiliation}{#1}}
-\makeatother
-
-\pagestyle{empty}
-
+% 和文タイトル
 \title{大学ICT推進協議会年次大会 予稿用テンプレート}
+% 和文著書.
+% 複数所属の場合, 右肩に片括弧数字を付与してください. Authblk には対応していません)
 \author{森 鴎外$^{1)}$, 夏目 漱石$^{1),2)}$, 芥川 龍之介$^{2)}$}
+% 和文所属. 所属ごとに改行 '\\' を入れてください
 \affiliation{
 1) 日本文学大学 情報センター \\
 2) 日本文学大学 大学院文学研究科}
+% コンタクトe-mail
 \contactemail{mori@nitibun-u.ac.jp}
+% 英文タイトル
 \etitle{Manuscript Template for AXIES Annual Meeting}
+% 英文著者. 和文所属と同様です
 \eauthor{Ogai Mori$^{1)}$, Soseki Natsume$^{1),2)}$, Ryunosuke Akutagawa$^{2)}$}
+% 英文所属. 和文所属と同様です
 \eaffiliation{
 1) Information Center, Nihon Bungaku Univ. \\
 2) Graduate School of Literature, Nihon Bungaku Univ.}
 
+% 概要の内容です
 \begin{abstract}
 大学ICT推進協議会年次大会の予稿用テンプレートです。大学ICT推進協議会年次大会の予稿用テンプレートです。大学ICT推進協議会年次大会の予稿用テンプレートです。大学ICT推進協議会年次大会の予稿用テンプレートです。	
 \end{abstract}
 
 \begin{document}
-
+% \begin{document} 直後に \maketitle コマンドを実施してください.
 \maketitle
 
 \section{はじめに}
