@@ -2,8 +2,8 @@
 % jsarticle, ひいては platex2e が必要です.
 % また geometry パッケージを使用します.
 %
-\ProvidesClass{jsaxiesproc}[2016/08/01]
-\LoadClass[a4paper,twocolumn,10pt]{jsarticle}
+\ProvidesClass{jsaxiesproc}[2020/10/16]
+\LoadClassWithOptions{jsarticle}
 
 \usepackage{geometry}
 
